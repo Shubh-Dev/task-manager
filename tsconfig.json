@@ -1,7 +1,16 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "ESNext", // Or any of the valid modules like 'node16' or 'es2020'
+    "moduleResolution": "Node"
+  }
 }
