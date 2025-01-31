@@ -17,4 +17,7 @@ export default defineConfig({
     // OR, even better for Gitpod:
     // allowedHosts: true, // Allow all hosts (simplest in Gitpod)
   },
+  // optimizeDeps: {
+  //   exclude: ['@supabase/supabase-js'],
+  // },
 })
