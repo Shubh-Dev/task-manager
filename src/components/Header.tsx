@@ -8,15 +8,13 @@ const Header = () => {
   const [error, setError] = useState<string | null>(null)
   const navigate = useNavigate() // useNavigate for navigation
 
-
-
   const toggleMenu = () => {
     setIsOpen((prev) => !prev)
   }
 
   const handleLogout = async () => {
     try {
-      const { error } = await supabase.auth.signOut();
+      const { error } = await supabase.auth.signOut()
       if (error) throw error
       navigate('/auth/login')
     } catch (err: unknown) {
@@ -39,7 +37,10 @@ const Header = () => {
         ></div>
         {isOpen && (
           <div className="absolute right-0 mt-2 w-18 bg-white border border-gray-300 rounded-lg shadow-lg">
-            <button className="w-full text-left p-2 text-sm hover:bg-gray-100" onClick={handleLogout}>
+            <button
+              className="w-full text-left p-2 text-sm hover:bg-gray-100"
+              onClick={handleLogout}
+            >
               Logout
             </button>
           </div>
