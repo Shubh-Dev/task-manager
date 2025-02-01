@@ -1,5 +1,5 @@
 // Components/TaskContainet
-import TaskItem from "./TaskItem"
+import TaskItem from './TaskItem'
 
 interface Task {
   id: string
@@ -21,7 +21,7 @@ const TaskContainer: React.FC<TaskContainerProps> = ({
 }) => {
   return (
     <div>
-      <div className={`${headColor} flex justify-between px-2 items-center` }>
+      <div className={`${headColor} flex justify-between px-2 items-center`}>
         <div>
           {title} {count}
         </div>
@@ -31,7 +31,12 @@ const TaskContainer: React.FC<TaskContainerProps> = ({
       </div>
       <div>
         {tasks.map((task) => (
-          <TaskItem key={task.id} id={task.id} title={task.title} status={task.status} />
+          <TaskItem
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            status={task.status}
+          />
         ))}
       </div>
     </div>
