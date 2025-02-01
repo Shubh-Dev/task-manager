@@ -6,10 +6,11 @@ const Login = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      const {  error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'http://localhost:5173/auth/login/callback', // local callback URL
+          redirectTo:
+            'https://iofksvgydjttdbbdbtlx.supabase.co/auth/v1/callback', // local callback URL
         },
       })
 
