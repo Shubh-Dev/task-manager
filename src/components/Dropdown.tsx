@@ -7,8 +7,8 @@ interface DropdownProps {
 
 const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
   return (
-    <div className="relative w-48">
-      <select className="w-full border border-gray-300 rounded-md p-2 appearance-none focus:outline-none">
+    <div className="relative w-24 flex">
+      <select className="w-full border border-gray-300 rounded-3xl p-2 appearance-none focus:outline-none text-gray-600 font-medium text-xs">
         <option value="">{label}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>
@@ -16,9 +16,13 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
           </option>
         ))}
       </select>
-      <span className="absolute right-3 top-3 text-gray-500">▼</span>
+      <img
+        src="/assets/chevron-down.svg"
+        alt="down"
+        className="absolute right-3 top-2 text-gray-500"
+      />
     </div>
   )
 }
 
-export default Dropdown;
+export default Dropdown

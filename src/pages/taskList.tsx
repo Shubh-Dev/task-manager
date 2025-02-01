@@ -6,14 +6,16 @@ const taskList = () => {
     <div>
       <Header />
       <div className="p-4">
-        <img
-          src="/assets/Add Task.svg"
-          alt="Add Task"
-          className="float-right"
-        />
-      </div>
-      <div className="mt-8">
-        <Hero />
+        <div>
+          <img
+            src="/assets/Add Task.svg"
+            alt="Add Task"
+            className="float-right"
+          />
+        </div>
+        <div className="mt-12">
+          <Hero />
+        </div>
       </div>
     </div>
   )
