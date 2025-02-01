@@ -1,0 +1,66 @@
+const tasks = [
+  {
+    id: '1',
+    title: 'Finish project proposal',
+    description: 'Complete the proposal for the new client project.',
+    category: 'work',
+    dueDate: '2025-02-05',
+    status: 'in-progress', // 'in-progress', 'completed', 'pending'
+    tags: ['urgent', 'client'],
+    createdAt: '2025-01-30',
+    updatedAt: '2025-02-01',
+    history: [
+      { action: 'created', date: '2025-01-30' },
+      { action: 'edited', date: '2025-02-01' },
+    ],
+    files: [
+      { name: 'project_proposal.pdf', url: '/files/project_proposal.pdf' },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Buy groceries',
+    description: 'Purchase items for the week’s meals.',
+    category: 'personal',
+    dueDate: '2025-02-02',
+    status: 'pending',
+    tags: ['important'],
+    createdAt: '2025-01-28',
+    updatedAt: '2025-01-29',
+    history: [{ action: 'created', date: '2025-01-28' }],
+    files: [],
+  },
+  {
+    id: '3',
+    title: 'Plan weekend trip',
+    description: 'Organize itinerary and book accommodations.',
+    category: 'personal',
+    dueDate: '2025-02-07',
+    status: 'in-progress',
+    tags: ['vacation'],
+    createdAt: '2025-01-31',
+    updatedAt: '2025-02-01',
+    history: [
+      { action: 'created', date: '2025-01-31' },
+      { action: 'edited', date: '2025-02-01' },
+    ],
+    files: [{ name: 'trip_itinerary.docx', url: '/files/trip_itinerary.docx' }],
+  },
+  {
+    id: '4',
+    title: 'Prepare meeting agenda',
+    description: 'Create a detailed agenda for the upcoming team meeting.',
+    category: 'work',
+    dueDate: '2025-02-04',
+    status: 'completed',
+    tags: ['work'],
+    createdAt: '2025-01-29',
+    updatedAt: '2025-02-01',
+    history: [
+      { action: 'created', date: '2025-01-29' },
+      { action: 'completed', date: '2025-02-01' },
+    ],
+    files: [],
+  },
+]
+export default tasks
