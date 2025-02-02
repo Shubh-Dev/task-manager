@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { IoClose } from 'react-icons/io5'
+import PrimaryInput from './PrimaryInput'
 
 interface CreateProps {
   isOPen: boolean
@@ -16,7 +17,7 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [onClose])
-   if (!isOpen) return null;
+  if (!isOpen) return null
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-400 bg-opacity-50 z-50">
       <div
@@ -29,13 +30,11 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
         </div>
 
         <p className="border border-gray-200 mt-4"></p>
-
-
-       <div>
-        
-       </div>
+        <div className="m-2">
+          <PrimaryInput placeholder="Task Title" type="input" />
+          <PrimaryInput placeholder="Description" type="text" />
+        </div>
       </div>
-      
     </div>
   )
 }
