@@ -17,7 +17,7 @@ const SecondaryInput: React.FC<SecondaryInputProps> = ({
   options = [],
 }) => {
   return (
-    <div className="relative w-full">
+    <div className="relative">
          <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label> {/* Label added */}
       {type === 'date' ? (
         <div className="flex items-center">
@@ -26,16 +26,16 @@ const SecondaryInput: React.FC<SecondaryInputProps> = ({
             value={value}
             onChange={onChange}
             placeholder={placeholder}
-            className="w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none"
+            className="px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none"
           />
-          <img src="/assets/calender_icon.svg" alt="calender" className="absolute right-3" />
+          {/* <img src="/assets/calender_icon.svg" alt="calender" className="absolute right-3" /> */}
         </div>
       ) : (
         <div className="flex items-center">
           <select
             value={value}
             onChange={onChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none"
+            className="w-3/6 px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none"
           >
             <option value="" disabled>
               {placeholder}
@@ -46,7 +46,7 @@ const SecondaryInput: React.FC<SecondaryInputProps> = ({
               </option>
             ))}
           </select>
-          <img src="assets/chevron-down.svg" alt="calender" className="absolute right-3" />
+          {/* <img src="assets/chevron-down.svg" alt="calender" className="absolute right-3" /> */}
           
         </div>
       )}

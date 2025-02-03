@@ -5,6 +5,10 @@ import { IoClose } from 'react-icons/io5'
 import PrimaryInput from './PrimaryInput'
 import CategoryInput from './CategoryInput'
 import SecondaryInput from './SecondaryInput'
+import FileUploader from './FileUploader'
+import PrimaryButton from './PrimaryButton'
+import { Formik, Field, Form } from 'formik'
+import * as Yup from 'yup'
 
 interface CreateProps {
   isOpen: boolean
@@ -29,7 +33,7 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-400 bg-opacity-50 z-50">
       <div
-        className="bg-white rounded-2xl  shadow-lg w-full relative"
+        className="bg-white rounded-2xl py-4  shadow-lg w-full relative"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center p-3">
@@ -71,6 +75,13 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
                 onChange={(e) => setTaskStatus(e.target.value)}
                 options={['Not Started', 'In Progress', 'Completed']}
               />
+            </div>
+            <div>
+              <FileUploader text="Drop your files here" />
+            </div>
+            <div className="rounded-md bg-gray-300 p-4 flex items-end gap-2">
+              <PrimaryButton text="CANCEL" bgColor="bg-[#ffffff]" textColor="text-black" />
+              <PrimaryButton text="CREATE" bgColor="bg-[#7B1984]" textColor="text-white" />
             </div>
           </div>
         </form>
