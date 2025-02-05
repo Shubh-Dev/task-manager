@@ -2,17 +2,19 @@ interface PrimaryButtonProps {
   text: string
   bgColor: string
   textColor: string
-  onClick: () => void
+  type?: "button" | "submit" | "reset"
+  onClick?: () => void
 }
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   text,
   bgColor,
   textColor,
+  type="button",
   onClick
 }) => {
   return (
-    <button onClick={onClick} type="button" className={`${bgColor} ${textColor} p-2 rounded-md`}>
+    <button onClick={onClick} type={type} className={`${bgColor} ${textColor} p-2 rounded-md`}>
       {text}
     </button>
   )
