@@ -1,4 +1,3 @@
-
 interface SecondaryInputProps {
   type: 'date' | 'dropdown'
   placeholder: string
@@ -18,7 +17,10 @@ const SecondaryInput: React.FC<SecondaryInputProps> = ({
 }) => {
   return (
     <div className="relative">
-         <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label> {/* Label added */}
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        {label}
+      </label>{' '}
+      {/* Label added */}
       {type === 'date' ? (
         <div className="flex items-center">
           <input
@@ -47,7 +49,6 @@ const SecondaryInput: React.FC<SecondaryInputProps> = ({
             ))}
           </select>
           {/* <img src="assets/chevron-down.svg" alt="calender" className="absolute right-3" /> */}
-          
         </div>
       )}
     </div>
