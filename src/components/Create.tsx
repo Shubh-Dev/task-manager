@@ -15,6 +15,7 @@ interface CreateProps {
 }
 
 const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
+
   const formik = useFormik({
     initialValues: {
       title: '',
@@ -26,7 +27,7 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
     },
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
-      const { title, description, category, dueDate, taskStatus, files } = values
+      const { title, description, category, dueDate, taskStatus } = values
 
       const { data, error } = await supabase
         .from('tasks')
@@ -37,7 +38,7 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
             category,
             due_date: dueDate,
             status: taskStatus,
-            files,
+            
           },
         ])
 
@@ -77,7 +78,7 @@ const Create: React.FC<CreateProps> = ({ isOpen, onClose }) => {
         <form className="m-2" onSubmit={formik.handleSubmit}>
           <PrimaryInput
             placeholder="Task Title"
-            type="text"
+            type="input"
             name="title"
             value={formik.values.title}
             onChange={formik.handleChange}
