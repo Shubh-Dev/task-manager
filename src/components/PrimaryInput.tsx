@@ -1,13 +1,17 @@
 // components/PrimaryInput.tsx
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { BiBold, BiItalic, BiListUl, BiListOl } from 'react-icons/bi'
 
 interface PrimaryInputProps {
   type: 'input' | 'text'
   placeholder: string
+  name: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) =>void
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
 }
 
-const PrimaryInput: React.FC<PrimaryInputProps> = ({ placeholder, type }) => {
+const PrimaryInput: React.FC<PrimaryInputProps> = ({ placeholder, type, name, value, onChange, onBlur }) => {
   const [text, setText] = useState('')
 
   return (
@@ -20,9 +24,11 @@ const PrimaryInput: React.FC<PrimaryInputProps> = ({ placeholder, type }) => {
     >
       <input
         type="text"
+        name={name}
         placeholder={placeholder}
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
         className="w-full focus:outline-none bg-transparent mt-1"
       />
 

@@ -1,52 +1,103 @@
-# React + TypeScript + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is react app that allows users to manage tasks .
 
-Currently, two official plugins are available:
+### Deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Link](https://)
 
-## Expanding the ESLint configuration
+<!-- ![screenshot](./desktop.png) -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Built With
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- Tailwind
+- Supabase
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+## Prerequisites
+
+- Have VSCode or other text editor installed. [Link to download VSCode](https://code.visualstudio.com/download)
+- Install node package. [Link to download node](https://nodejs.org/en/download/)
+- Have git installed.[Link to download git](https://git-scm.com/downloads)
+- Create a github repository.
+- create new react app [Check this link to learn how](https://reactjs.org/docs/create-a-new-react-app.html)
+
+## Setup
+
+```javascript
+ git clone git@github.com
+ cd awesome-books
+ npm install
+ npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Run tests
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+For tracking linters errors locally, you need to follow these steps:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- For tracking linter errors in HTML file run:
+
+```javascript
+npm install --save-dev hint@6.x
 ```
+
+```javascript
+npx hint .
+```
+
+- For tracking linter errors in CSS file run:
+
+```javascript
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
+
+```javascript
+npx stylelint "**/*.{css,scss}"
+```
+
+- For tracking linter errors in Javascript and React file run:
+
+```javascript
+npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+```
+
+```javascript
+npx eslint .
+```
+
+## Deployment
+
+- Use GitHub pages to deploy website
+- For more information about publishing sources, see [About github pages](https://pages.github.com/)
+
+## Authors
+
+👤 **Shubh M**
+
+- GitHub: [@Shubh-Dev](https://github.com/Shubh-Dev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shubhscb/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you liked this project!
+
+## Acknowledgments
+
+- Coding Partners
+- Code Reviewers
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
 
 npx prettier --write .
